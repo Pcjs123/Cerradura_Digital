@@ -1,6 +1,8 @@
 # Contenido
 En este proyecto de GitHub se encuentra toda la información referente al proyecto de una cerradura segura digital, el cual se presentó como proyecto final de la materia Electrónica Digital I de la Universidad Nacional de Colombia.
 
+Luego de describir el contenido del GitHub, se presenta el informe del proyecto dentro de este archivo README.
+
 Dentro de la carpeta **FPGACerradura** se encuentrá todo el proyecto para el software Quartus. Los archivos más relevantes son los que tienen extensión .vhd, y corresponden al código de descripción de hardware (VHDL) para programar el funcionamiento de la FPGA.
 
 Archivos VHDL relevantes:
@@ -23,7 +25,7 @@ Archivos relevantes Arduino-SensorHuella:
     + **IMPORTANTE:** Para enviar señales digitales entre una FPGA y un Arduino, se debe revisar los valores de voltaje que trabajan. En este proyecto, se utilzaron divisores de frecuencia para mandar la señal desde el Arduino (5V) hacia la FPGA (3.3V).
 
 El archivo .pdf es el póster que se presentó en el **TECHFEST 2023** que se realizó en la Universidad El Bosque, Bogotá.
-![](Imagenes/CertificadoTECHFEST.png)
+![](Imagenes/certTECHFEST.jpeg)
 
 # Cerradura Digital
 

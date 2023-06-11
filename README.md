@@ -15,8 +15,15 @@ Archivos VHDL relevantes:
 
 Dentro de la carpeta **SensorHuellaArduino** se encuenta toda la información referente al sistema Arduino-SensorHuella. Cierta información puede ser específica del sensor que se tenga, por ende, revisar y aplicar la información con precaución.
 
-Archivos:
-+ Conexiones.JPG ->
+Archivos relevantes Arduino-SensorHuella:
++ La librería para trabajar con el sensor con Arduino es el archivo .zip. Esta librería (de libre acceso) pertenece a INNOVA DOMOTICS y pueden encontrar sus videos tutoriales en:
+    + https://www.youtube.com/watch?v=2dCMj4unW2M
+    + https://www.youtube.com/watch?v=N9fsM_HwapU
++ El archivo AuthHuella/AuthHuella.ino es el código que se sube en el Arduino UNO para el funcionamiento de todo el sistema. En este archivo se reciben entradas digitales de la FPGA y se mandan salidas digitales a la FPGA. Además, se realiza toda la conexión con el sensor de huella dactilar y se autentica con la librería mencionada anteriormente. 
+    + **IMPORTANTE:** Para enviar señales digitales entre una FPGA y un Arduino, se debe revisar los valores de voltaje que trabajan. En este proyecto, se utilzaron divisores de frecuencia para mandar la señal desde el Arduino (5V) hacia la FPGA (3.3V).
+
+El archivo .pdf es el póster que se presentó en el **TECHFEST 2023** que se realizó en la Universidad El Bosque, Bogotá.
+![](Imagenes/CertificadoTECHFEST.png)
 
 # Cerradura Digital
 

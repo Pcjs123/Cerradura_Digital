@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "beep",
+					"strict" : false
+				},
+				{
+					"name" : "ledR",
+					"strict" : false
+				},
+				{
+					"name" : "ledG",
+					"strict" : false
+				},
+				{
+					"name" : "ledB",
+					"strict" : false
+				},
+				{
+					"name" : "pwmServo",
+					"strict" : false
+				},
+				{
+					"name" : "Arduino_clave",
+					"strict" : false
+				},
+				{
+					"name" : "Sensor_listo",
+					"strict" : false
+				},
+				{
+					"name" : "authHuella",
+					"strict" : false
+				},
+				{
+					"name" : "btn4",
+					"strict" : false
+				},
+				{
+					"name" : "btn1",
+					"strict" : false
+				},
+				{
+					"name" : "btn2",
+					"strict" : false
+				},
+				{
+					"name" : "btn3",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

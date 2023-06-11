@@ -1,0 +1,10 @@
+SENSOR HUELLA DACTILAR AS608 (el que compré en Mercado Libre)
+
+ROJO -> VCC 3.3V
+VERDE -> GND
+NEGRO -> RX
+AMARILLO -> TX
+
+Conexión Serial -> 57600
+
+En los códigos de ejemplo de la librería Innovas Dactilar Sensor Huella -> SoftwareSerial MySerial(pinRX, pinTX);

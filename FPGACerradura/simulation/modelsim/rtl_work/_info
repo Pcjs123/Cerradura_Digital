@@ -1,0 +1,219 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Digital/Proyecto/FPGACerradura/simulation/modelsim
+Eclave
+Z1 w1684106650
+Z2 DPx4 work 3 fcv 0 22 >:O_l3P`oEZ@kQ5nNjfS22
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z7 8D:/Digital/Proyecto/FPGACerradura/CLAVE.vhd
+Z8 FD:/Digital/Proyecto/FPGACerradura/CLAVE.vhd
+l0
+L7 1
+VnoDTeXmY04zRdD;;iWCTQ0
+!s100 B;LB2^PO8^z3HzLNWGH6L1
+Z9 OV;C;2020.1;71
+31
+Z10 !s110 1684106704
+!i10b 1
+Z11 !s108 1684106704.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|D:/Digital/Proyecto/FPGACerradura/CLAVE.vhd|
+!s107 D:/Digital/Proyecto/FPGACerradura/CLAVE.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Aclave_arch
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 clave 0 22 noDTeXmY04zRdD;;iWCTQ0
+!i122 4
+l22
+L18 29
+VHQR;URNY8DWm[h2lYTBY62
+!s100 VAMDh<=g:g:=j;mSo06`F1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+Z15 !s107 D:/Digital/Proyecto/FPGACerradura/CLAVE.vhd|
+!i113 1
+R13
+R14
+Ediv_frec
+Z16 w1684034458
+Z17 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R3
+R4
+R5
+R6
+!i122 1
+R0
+Z18 8D:/Digital/Proyecto/FPGACerradura/div_frec.vhd
+Z19 FD:/Digital/Proyecto/FPGACerradura/div_frec.vhd
+l0
+L7 1
+VhRbA4HS6GH<M0Sm5__<KX0
+!s100 6zdIHoo5n`<dK[ZC8f1lC2
+R9
+31
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/Digital/Proyecto/FPGACerradura/div_frec.vhd|
+Z21 !s107 D:/Digital/Proyecto/FPGACerradura/div_frec.vhd|
+!i113 1
+R13
+R14
+Adivisor
+R17
+R3
+R4
+R5
+R6
+DEx4 work 8 div_frec 0 22 hRbA4HS6GH<M0Sm5__<KX0
+!i122 1
+l23
+L18 22
+VKkjNLhBJkbfonF]_D>mYM0
+!s100 7BPkcSU@cO_lWN1HC[AVf3
+R9
+31
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 1
+R13
+R14
+Pfcv
+!i122 0
+w1684105526
+R0
+8D:/Digital/Proyecto/FPGACerradura/FCV.vhd
+FD:/Digital/Proyecto/FPGACerradura/FCV.vhd
+l0
+L1 1
+V>:O_l3P`oEZ@kQ5nNjfS22
+!s100 nJi3B1EEKFTjM_BTPfQ<;1
+R9
+31
+!s110 1684106703
+!i10b 1
+!s108 1684106703.000000
+!s90 -reportprogress|300|-93|-work|work|D:/Digital/Proyecto/FPGACerradura/FCV.vhd|
+!s107 D:/Digital/Proyecto/FPGACerradura/FCV.vhd|
+!i113 1
+R13
+R14
+Eled
+Z22 w1683531609
+R2
+R3
+R4
+R5
+R6
+!i122 3
+R0
+Z23 8D:/Digital/Proyecto/FPGACerradura/LED.vhd
+Z24 FD:/Digital/Proyecto/FPGACerradura/LED.vhd
+l0
+L7 1
+ViQlIoW`n<nJ8<8X<k?oGz3
+!s100 fBT@3fg^RFH?USi3n9U351
+R9
+31
+R10
+!i10b 1
+R11
+Z25 !s90 -reportprogress|300|-93|-work|work|D:/Digital/Proyecto/FPGACerradura/LED.vhd|
+Z26 !s107 D:/Digital/Proyecto/FPGACerradura/LED.vhd|
+!i113 1
+R13
+R14
+Aled_arch
+R2
+R3
+R4
+R5
+R6
+DEx4 work 3 led 0 22 iQlIoW`n<nJ8<8X<k?oGz3
+!i122 3
+l19
+L17 9
+Vml1O]bPjNaQRg5zH:GS`D1
+!s100 BX2U<2l3NDZIV^VHo[gL`1
+R9
+31
+R10
+!i10b 1
+R11
+R25
+R26
+!i113 1
+R13
+R14
+Emain
+Z27 w1684106006
+R2
+R3
+R4
+R5
+R6
+!i122 2
+R0
+Z28 8D:/Digital/Proyecto/FPGACerradura/Main.vhd
+Z29 FD:/Digital/Proyecto/FPGACerradura/Main.vhd
+l0
+L7 1
+VU9b?8A5TE@m5nbfG]_oEV1
+!s100 @QnS09URTnj=@VC2]D@N]3
+R9
+31
+R10
+!i10b 1
+R11
+Z30 !s90 -reportprogress|300|-93|-work|work|D:/Digital/Proyecto/FPGACerradura/Main.vhd|
+Z31 !s107 D:/Digital/Proyecto/FPGACerradura/Main.vhd|
+!i113 1
+R13
+R14
+Amain_arch
+R2
+R3
+R4
+R5
+R6
+DEx4 work 4 main 0 22 U9b?8A5TE@m5nbfG]_oEV1
+!i122 2
+l67
+L25 64
+V[7SF6[Q66^ZSMkKR4DZ9z0
+!s100 hGz^idPGW:9V?<JelES8N1
+R9
+31
+R10
+!i10b 1
+R11
+R30
+R31
+!i113 1
+R13
+R14

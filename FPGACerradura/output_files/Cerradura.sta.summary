@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.024
+TNS   : -340.810
+
+Type  : Slow 1200mV 85C Model Setup 'div_frec:clkServo|salida'
+Slack : -3.975
+TNS   : -93.002
+
+Type  : Slow 1200mV 85C Model Setup 'div_frec:clkClave|salida'
+Slack : -3.256
+TNS   : -5.124
+
+Type  : Slow 1200mV 85C Model Setup 'div_frec:clkTemporizador|salida'
+Slack : -3.241
+TNS   : -66.670
+
+Type  : Slow 1200mV 85C Model Hold 'div_frec:clkClave|salida'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'div_frec:clkTemporizador|salida'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'div_frec:clkServo|salida'
+Slack : 0.653
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'div_frec:clkClave|salida'
+Slack : -4.845
+TNS   : -81.874
+
+Type  : Slow 1200mV 85C Model Recovery 'div_frec:clkTemporizador|salida'
+Slack : -2.814
+TNS   : -89.664
+
+Type  : Slow 1200mV 85C Model Removal 'div_frec:clkTemporizador|salida'
+Slack : 1.754
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'div_frec:clkClave|salida'
+Slack : 3.093
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -185.901
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_frec:clkServo|salida'
+Slack : -1.487
+TNS   : -49.071
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_frec:clkTemporizador|salida'
+Slack : -1.487
+TNS   : -47.584
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_frec:clkClave|salida'
+Slack : -1.487
+TNS   : -28.253
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.685
+TNS   : -297.231
+
+Type  : Slow 1200mV 0C Model Setup 'div_frec:clkServo|salida'
+Slack : -3.656
+TNS   : -80.599
+
+Type  : Slow 1200mV 0C Model Setup 'div_frec:clkClave|salida'
+Slack : -3.029
+TNS   : -4.118
+
+Type  : Slow 1200mV 0C Model Setup 'div_frec:clkTemporizador|salida'
+Slack : -2.794
+TNS   : -57.183
+
+Type  : Slow 1200mV 0C Model Hold 'div_frec:clkClave|salida'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'div_frec:clkTemporizador|salida'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'div_frec:clkServo|salida'
+Slack : 0.617
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'div_frec:clkClave|salida'
+Slack : -4.491
+TNS   : -75.606
+
+Type  : Slow 1200mV 0C Model Recovery 'div_frec:clkTemporizador|salida'
+Slack : -2.510
+TNS   : -79.872
+
+Type  : Slow 1200mV 0C Model Removal 'div_frec:clkTemporizador|salida'
+Slack : 1.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'div_frec:clkClave|salida'
+Slack : 2.777
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -185.901
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_frec:clkServo|salida'
+Slack : -1.487
+TNS   : -49.071
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_frec:clkTemporizador|salida'
+Slack : -1.487
+TNS   : -47.584
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_frec:clkClave|salida'
+Slack : -1.487
+TNS   : -28.253
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.525
+TNS   : -81.601
+
+Type  : Fast 1200mV 0C Model Setup 'div_frec:clkServo|salida'
+Slack : -1.158
+TNS   : -23.763
+
+Type  : Fast 1200mV 0C Model Setup 'div_frec:clkClave|salida'
+Slack : -0.917
+TNS   : -0.917
+
+Type  : Fast 1200mV 0C Model Setup 'div_frec:clkTemporizador|salida'
+Slack : -0.883
+TNS   : -11.898
+
+Type  : Fast 1200mV 0C Model Hold 'div_frec:clkClave|salida'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div_frec:clkTemporizador|salida'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div_frec:clkServo|salida'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'div_frec:clkClave|salida'
+Slack : -1.628
+TNS   : -27.296
+
+Type  : Fast 1200mV 0C Model Recovery 'div_frec:clkTemporizador|salida'
+Slack : -0.600
+TNS   : -19.184
+
+Type  : Fast 1200mV 0C Model Removal 'div_frec:clkTemporizador|salida'
+Slack : 0.658
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'div_frec:clkClave|salida'
+Slack : 1.342
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -133.955
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_frec:clkServo|salida'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_frec:clkTemporizador|salida'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_frec:clkClave|salida'
+Slack : -1.000
+TNS   : -19.000
+
+------------------------------------------------------------

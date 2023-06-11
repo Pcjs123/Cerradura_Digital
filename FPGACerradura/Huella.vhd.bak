@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use WORK.FCV.all;
+
+
+entity Huella is
+
+	port(
+	reset:in	std_logic;
+	desautorizar: out std_logic;
+	prendida: out std_logic
+	);
+		
+end Huella;
+
+architecture Huella_arch of Huella is
+
+
+begin
+prendida<='1';
+
+process (reset)
+		begin
+			if reset = '1' then
+				desautorizar <='1';
+			else
+				desautorizar <='0';
+			end if;
+end process;
+
+end Huella_arch;

@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+
+
+entity SERVO is
+    Port (
+        input : in std_logic;
+        PWM : out std_logic
+    );
+end SERVO;
+
+architecture SERVO_arch of SERVO is
+
+    signal Ciclo_de_trabajo : integer range 0 to 10000 := 500;
+    signal Contador : integer range 0 to 10000 := 0;
+	 
+begin
+
+    process (input)
+    begin
+        if input = '1' then
+           Ciclo_de_trabajo <= 750;
+        else
+           Ciclo_de_trabajo <= 500;  
+        end if;
+    end process;
+    
+	 
+    process (Contador)
+    begin
+        if Contador = 10000 then
+            Contador <= 0;
+        else
+            Contador <= Contador + 1;
+        end if;
+    end process;
+    
+	 
+	process (Contador, Ciclo_de_trabajo)
+    begin
+        if Contador < Ciclo_de_trabajo then
+            PWM <= '1';
+        else
+            PWM <= '0';
+        end if;
+    end process;
+end SERVO_arch;

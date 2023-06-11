@@ -1,0 +1,3 @@
+PACKAGE FCV IS
+    TYPE coloresLED IS (rojo, verde, amarillo);
+END PACKAGE;

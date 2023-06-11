@@ -1,3 +1,23 @@
+# Contenido
+En este proyecto de GitHub se encuentra toda la información referente al proyecto de una cerradura segura digital, el cual se presentó como proyecto final de la materia Electrónica Digital I de la Universidad Nacional de Colombia.
+
+Dentro de la carpeta **FPGACerradura** se encuentrá todo el proyecto para el software Quartus. Los archivos más relevantes son los que tienen extensión .vhd, y corresponden al código de descripción de hardware (VHDL) para programar el funcionamiento de la FPGA.
+
+Archivos VHDL relevantes:
++ CLAVE.vhd -> se encarga del sistema de autenticación por contraseña de 6 dígitos utilizando 4 pulsadores.
++ FCV.vhd -> librería personalizada para codificar los tipos de datos que se trabajan a lo largo de las señales.
++ Huella.vhd -> se encarga de enviar y recibir la información de comunicación con el Arduino (sistema de la huella dactilar).
++ LED.vhd -> se encarga de definir los colores del LED en base al estado del sistema.
++ Main.vhd -> el archivo principal que se encarga de conectar las diferentes entidades, recibir las entradas de la FPGA y definir las salidas de la FPGA.
++ SERVO.vhd -> define la señal de control PWM para ubicar la posición del servomotor en base a la autenticación.
++ Temporizador.vhd -> es un contador que se encarga de reiniciar el sistema luego de un tiempo de haber abierto la puerta.
++ div_frec.vdh -> es un divisor de frecuencia para poder definir los diferentes clocks de los circuitos secuenciales a partir del clock de la FPGA.
+
+Dentro de la carpeta **SensorHuellaArduino** se encuenta toda la información referente al sistema Arduino-SensorHuella. Cierta información puede ser específica del sensor que se tenga, por ende, revisar y aplicar la información con precaución.
+
+Archivos:
++ Conexiones.JPG ->
+
 # Cerradura Digital
 
 ![](Imagenes/ESCUDO.png)
@@ -171,4 +191,4 @@ Detalle de la Caja Main
 
 Se cumplió con todos los objetivos del proyecto. El sistema utilizado es más seguro que un sistema de llave ya que la huella dactilar de una persona es más difícil de clonar y no se pierde. Además, tener una contraseña para habilitar el sistema de huella agrega seguridad ya que un ladrón no conoce dicha contraseña en un principio.
 
-Para una implementación real del sistema se debe cambiar el servomotor por todo un sistema más robusto para la puerta que no permita ser abierta a la fuerza y que en caso de falta de energía, tenga batería de repuesto para evitar que deje de funcionar por falta de electricidad.
+Para una implementación real del sistema se debe cambiar el servomotor por todo un sistema más robusto para la puerta que no permita ser abierta a la fuerza y que en caso de falta de energía, tenga batería de repuesto para evitar que deje de funcionar por falta de electricidad. Además, en vez de usar un temporizador para reiniciar el sistema y cerrar la puerta, se debe poner un sensor que detecte cuando se cierra la puerta y que, en base a la señal del sensor, reinicie el sistema de autenticación.

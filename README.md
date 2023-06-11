@@ -1,7 +1,6 @@
 # Cerradura Digital
-Proyecto final de electrónica digital haciendo uso de una FPGA con Quartus
 
-![Texto alternativo](img/ESCUDO.png)
+![](Imagenes/ESCUDO.png)
 
 
 **Laboratorio Electrónica Digital I**
@@ -105,3 +104,71 @@ El presupuesto estimado para un mes se presenta a continuación:
 | Arduino UNO                          | \$53.550    |
 | Insumos (PC, Internet, Luz, etc.)    | \$3'000.000 |
 | **Total**                            | **\$11'303.550** |
+
+# Esquemas
+A continuación se detalla las cajas necesarias para el desarrollo del proyecto. Se describen de manera general y específica para su mayor comprensión.
+## General
+Para la realización del proyecto se realizo un esquema general de las entradas y salidas del sistema, como se puede observar a continuación se tiene como entradas la clave que será digitada con 4 pulsadores. 
+
+![](Imagenes/1_General.jpg)
+
+Caja general del sistema de cerradura de seguridad
+
+Como se puede ver a continuación se detalló las cajas que componen el sistema general con las entradas correspondientes. El “Main” es la caja central de control y se requieren de otras, además es importante aclara que el “CLK” que se encuentra en la entrada de varias de las cajas es el CLK que tiene la FPGA internamente.
+
+![](Imagenes/2_General_det.jpg)
+
+Caja general con las cajas internas
+
+## Huella
+A continuación, se especifica que tienen cada una de las cajas que componen el sistema empezando por la caja de huella.
+
+![](Imagenes/3_Huella.jpg)
+
+Detalle de la Caja Huella
+
+Como se puede ver, el sistema es completamente controlado por el Arduino, ya que es este es el que recibe la señal del dispositivo de huellas para saber si la huella ingresada esta guardada o no, el Arduino está constantemente conectado con el “Main” para saber el estado del resto del sistema.
+
+## Temporizador
+El temporizador está únicamente compuesto por un contador, que cuando se llega al tiempo determinado manda un uno para el “Reset” de todos los elementos del sistema.
+
+![](Imagenes/4_Temporizador.jpg)
+
+Detalle de la Caja Temporizador
+
+## Clave
+Para la clave se tienen dos elementos, el primero son los flip flops que van a ir guardando la clave que el usuario ingrese, se tiene presente que son 4 botones, pero la clave tiene 6 dígitos. El segundo elemento es un comparador que nos va a determinar si la clave ingresada por el usuario es la correcta, la salida de este comparador es que se conecta con el “Main” el cual va a recibir por parte del comparador un 1 o un 0.
+
+![](Imagenes/5_Clave.jpg)
+
+Detalle de la Caja Clave
+
+## Servomotor
+Para el servomotor lo que se tiene internamente es una “PWM”, ya que el servomotor se mueve según el ciclo de trabajo de esta, esta señal la procesa directamente el servomotor e interpreta cuanto se tiene que mover y en qué dirección.
+
+![](Imagenes/6_Servomotor.jpg)
+
+Detalle de la Caja Servomotor
+
+## Main
+El “Main” es uno de los elementos más importantes, ya que es la que recibe la señal de la huella y de la clave y determina el estado de las salidas. El LED cambia su color dependiendo de la señal que reciba, por lo tanto, está conectado a un multiplexor que determina cuál es la señal que ingresa y determina el color que tiene que alumbrar. Por otro lado, tenemos una compuerta AND que nos dice si la clave y la huella son correctas, de ser así esta la manda la señal correspondiente a las salidas para que cambien su estado.
+
+![](Imagenes/7_Main.jpg)
+
+Detalle de la Caja Main
+
+# Problemas en el desarrollo del proyecto
++ Al momento de conectar el detector de huella, los colores de las conexiones no correspondían con los colores estándar para identificar la función de cada uno de los cables, por lo que fue necesario recurrir al datasheet para poder realizar las conexiones de manera correcta y evitar danos en el dispositivo.
++ Cuando se implementó el “Reset” era necesario que la FPGA le comunicara al Arduino que desautorizara la huella y quedara lista para recibir otra huella nuevamente, ya que la huella y la clave funcionaban de manera paralela como sistemas independientes, entonces tocaba reiniciar cada sistema por separado, sin embargo, esta comunicación entre la FPGA y el Arduino no se realizaba de manera correcta, puesto que el sistema comenzaba a oscilar, este problema es probable que se presentara por la diferencia entre las tensiones de los elementos, ya que la FPGA tiene una salida de 3.3V y el Arduino trabaja con 5V. \enter Para solucionar este problema se priorizó la clave para el control de todo el sistema, de modo que sea necesario tener la clave correcta para poder activar la detección de huella, de esta manera cuando se activaba el “Reset” se reiniciaba la clave y como la huella quede dependiendo de esta, se lograba el objetivo de reiniciar todo el sistema.
++ Cuando se estaba realizando la asignación de pines del Quartus para cargar la programación a la FPGA, es importante que los bloques de pines tengan la misma tensión para evitar daños en la FPGA.
+
+# Video funcionamiento
+
+# Conclusiones
++ Se realizó la construcción e implementación de un sistema que mejora la seguridad en puerta mediante una cerradura digital, que permite o restringe el ingreso de personas mediante un proceso de autenticación.
++ Se aplicaron conocimientos de reconocimiento biométrico de huellas dactilares y se implementó un sistema de contraseña haciendo uso de pulsadores.
++ Se realizó un sistema digital usando la tarjeta de desarrollo FPGA, empleando conocimientos con operaciones lógicas digitales.
+
+Se cumplió con todos los objetivos del proyecto. El sistema utilizado es más seguro que un sistema de llave ya que la huella dactilar de una persona es más difícil de clonar y no se pierde. Además, tener una contraseña para habilitar el sistema de huella agrega seguridad ya que un ladrón no conoce dicha contraseña en un principio.
+
+Para una implementación real del sistema se debe cambiar el servomotor por todo un sistema más robusto para la puerta que no permita ser abierta a la fuerza y que en caso de falta de energía, tenga batería de repuesto para evitar que deje de funcionar por falta de electricidad.

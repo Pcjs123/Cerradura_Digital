@@ -144,7 +144,7 @@ Para la realización del proyecto se realizo un esquema general de las entradas 
 
 Caja general del sistema de cerradura de seguridad
 
-Como se puede ver a continuación se detalló las cajas que componen el sistema general con las entradas correspondientes. El “Main” es la caja central de control y se requieren de otras, además es importante aclara que el “CLK” que se encuentra en la entrada de varias de las cajas es el CLK que tiene la FPGA internamente.
+Como se puede ver a continuación se detalló las cajas que componen el sistema general con las entradas correspondientes. El “Main” es la caja central de control y se requieren de otras como se específica a continuación, además es importante aclara que el “CLK” que se encuentra en la entrada de varias de las cajas es el CLK que tiene la FPGA internamente.
 
 ![](Imagenes/2_General_det.jpg)
 
@@ -157,7 +157,7 @@ A continuación, se especifica que tienen cada una de las cajas que componen el 
 
 Detalle de la Caja Huella
 
-Como se puede ver, el sistema es completamente controlado por el Arduino, ya que es este es el que recibe la señal del dispositivo de huellas para saber si la huella ingresada esta guardada o no, el Arduino está constantemente conectado con el “Main” para saber el estado del resto del sistema.
+Como se puede ver, el sistema es completamente controlado por el Arduino, ya que es este es el que recibe la señal del dispositivo de huellas para saber si la huella ingresada esta guardada o no, el Arduino está constantemente conectado a la FPGA y a la caja de “Clave” para saber el estado del resto del sistema.
 
 ## Temporizador
 El temporizador está únicamente compuesto por un contador, que cuando se llega al tiempo determinado manda un uno para el “Reset” de todos los elementos del sistema.
@@ -167,7 +167,7 @@ El temporizador está únicamente compuesto por un contador, que cuando se llega
 Detalle de la Caja Temporizador
 
 ## Clave
-Para la clave se tienen dos elementos, el primero son los flip flops que van a ir guardando la clave que el usuario ingrese, se tiene presente que son 4 botones, pero la clave tiene 6 dígitos. El segundo elemento es un comparador que nos va a determinar si la clave ingresada por el usuario es la correcta, la salida de este comparador es que se conecta con el “Main” el cual va a recibir por parte del comparador un 1 o un 0.
+Para la clave se tienen dos elementos, el primero son los flip flops que van a ir guardando la clave que el usuario ingrese, se tiene presente que son 4 botones, pero la clave tiene 6 dígitos. El segundo elemento es un comparador que nos va a determinar si la clave ingresada por el usuario es la correcta, la salida de este comparador se conecta con el “Main” y la con caja de "Huella" los cuales van a recibir por parte del comparador un 1 o un 0.
 
 ![](Imagenes/5_Clave.jpg)
 
@@ -204,7 +204,7 @@ Por ejemplo, si el servomotor funciona con un periodo de 100 ms y para que est
 ![](Imagenes/9_PWM.jpg)
 
 ## Main
-El “Main” es uno de los elementos más importantes, ya que es la que recibe la señal de la huella y de la clave y determina el estado de las salidas. El LED cambia su color dependiendo de la señal que reciba, por lo tanto, está conectado a un multiplexor que determina cuál es la señal que ingresa y determina el color que tiene que alumbrar. Por otro lado, tenemos una compuerta AND que nos dice si la clave y la huella son correctas, de ser así esta la manda la señal correspondiente a las salidas para que cambien su estado.
+El “Main” es uno de los elementos más importantes, ya que es la que recibe la señal de la huella y de la clave y determina el estado de las salidas. El LED cambia su color dependiendo de la señal que reciba, por lo tanto, está conectado a un multiplexor que determina cuál es la señal que ingresa y determina el color que tiene que alumbrar. Por otro lado, tenemos una compuerta AND que nos dice si la clave y la huella son correctas, de ser así esta manda la señal correspondiente a las salidas para que cambien su estado.
 
 ![](Imagenes/7_Main.jpg)
 

@@ -32,9 +32,6 @@ El archivo .pdf es el póster que se presentó en el **TECHFEST 2023** que se re
 # Cerradura Digital
 
 ![](Imagenes/ESCUDO.png)
-for file in (Imagenes/ESCUDO.png); do
-convert -size 2048x1536 $file -thumbnail 800x600 fotoblog/foto_$file
-done
 
 
 **Laboratorio Electrónica Digital I**

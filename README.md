@@ -52,9 +52,7 @@ Profesor:
 **Diego Alexander Tibaduiza Burgos**
 
 
-Materia:
-
-Electrónica Digital I
+Materia: Electrónica Digital I
 
 
 Universidad Nacional de Colombia
@@ -172,12 +170,20 @@ Para la clave se tienen dos elementos, el primero son los flip flops que van a i
 
 Detalle de la Caja Clave
 
+### Circuito interno de la Caja Clave
+![](Imagenes/8_Clave.jpg)
+
 ## Servomotor
 Para el servomotor lo que se tiene internamente es una “PWM”, ya que el servomotor se mueve según el ciclo de trabajo de esta, esta señal la procesa directamente el servomotor e interpreta cuanto se tiene que mover y en qué dirección.
 
 ![](Imagenes/6_Servomotor.jpg)
 
 Detalle de la Caja Servomotor
+
+
+### Circuito interno de la Caja PWM
+
+![](Imagenes/9_PWM.jpg)
 
 ## Main
 El “Main” es uno de los elementos más importantes, ya que es la que recibe la señal de la huella y de la clave y determina el estado de las salidas. El LED cambia su color dependiendo de la señal que reciba, por lo tanto, está conectado a un multiplexor que determina cuál es la señal que ingresa y determina el color que tiene que alumbrar. Por otro lado, tenemos una compuerta AND que nos dice si la clave y la huella son correctas, de ser así esta la manda la señal correspondiente a las salidas para que cambien su estado.

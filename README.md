@@ -25,7 +25,7 @@ Archivos relevantes Arduino-SensorHuella:
     + **IMPORTANTE:** Para enviar señales digitales entre una FPGA y un Arduino, se debe revisar los valores de voltaje que trabajan. En este proyecto, se utilzaron divisores de frecuencia para mandar la señal desde el Arduino (5V) hacia la FPGA (3.3V).
 
 El archivo .pdf es el póster que se presentó en el **TECHFEST 2023** que se realizó en la Universidad El Bosque, Bogotá.
-![](Imagenes/certTECHFEST_2.jpeg)
+![](Imagenes/certTECHFEST_2.jpg)
 
 # Cerradura Digital
 

@@ -210,6 +210,36 @@ El “Main” es uno de los elementos más importantes, ya que es la que recibe 
 
 Detalle de la Caja Main
 
+## Diagrama de máquina de estados
+
+A continuación se muestra el diagrama de máquina de estados realizado para el presente proyecto. Cada uno de los estados se especifica a continuación:
++ S0 = El Arduino no está inicializado.
++ S1 = El Arduino está inicializado y el sistema está listo para recibir la clave.
++ S2 = La clave introducida es correcta y el sistema está listo para recibir la huella.
++ S4 = la Huella introducida es válida y la cerradura se encuentra abierta.
+Ahora la notación que se usó para el desarrollo del diagrama fue la siguiente:
++Arduino . Clave . Huella / LED . Cerradura
+Para cada uno se usó uno o dos bits y su representación sé específica a continuación:
+1. Arduino:
+   - 0 → El Arduino no está inicializado.
+   - 1  → El Arduino está inicializado.
+2. Arduino:
+   - 0 → No se ha introducido ninguna clave - La clave introducida es incorrecta.
+   - 1  → La clave introducida es correcta.
+3. Huella:
+   - 0 → No se ha introducido ninguna huella- La huella introducida no está registrada.
+   - 1  → La huella introducida está registrada.
+4. LED:
+   - 00 → Blanco.
+   - 01 → Rojo.
+   - 10 → Azul.
+   - 11 → Verde.
+5. Cerradura:
+   - 0 → La cerradura se encuentra cerrada.
+   - 1  → La cerradura se encuentra abierta.
+
+![](Imagenes/10_Maquina_Estados.jpg)
+
 # Problemas en el desarrollo del proyecto
 + Al momento de conectar el detector de huella, los colores de las conexiones no correspondían con los colores estándar para identificar la función de cada uno de los cables, por lo que fue necesario recurrir al datasheet para poder realizar las conexiones de manera correcta y evitar danos en el dispositivo.
 + Cuando se implementó el “Reset” era necesario que la FPGA le comunicara al Arduino que desautorizara la huella y quedara lista para recibir otra huella nuevamente, ya que la huella y la clave funcionaban de manera paralela como sistemas independientes, entonces tocaba reiniciar cada sistema por separado, sin embargo, esta comunicación entre la FPGA y el Arduino no se realizaba de manera correcta, puesto que el sistema comenzaba a oscilar, este problema es probable que se presentara por la diferencia entre las tensiones de los elementos, ya que la FPGA tiene una salida de 3.3V y el Arduino trabaja con 5V. \enter Para solucionar este problema se priorizó la clave para el control de todo el sistema, de modo que sea necesario tener la clave correcta para poder activar la detección de huella, de esta manera cuando se activaba el “Reset” se reiniciaba la clave y como la huella quede dependiendo de esta, se lograba el objetivo de reiniciar todo el sistema.

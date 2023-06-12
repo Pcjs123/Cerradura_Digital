@@ -209,7 +209,11 @@ Detalle de la Caja Main
 
 # Video funcionamiento
 
-![](Imagenes/VIDEO_FINAL.mp4)
+
+
+https://github.com/Pcjs123/Cerradura_Digital/assets/129623339/fd5de87d-74e6-4bf8-b9e2-81326893b977
+
+
 
 # Conclusiones
 + Se realizó la construcción e implementación de un sistema que mejora la seguridad en puerta mediante una cerradura digital, que permite o restringe el ingreso de personas mediante un proceso de autenticación.

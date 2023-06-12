@@ -220,7 +220,7 @@ A continuación se muestra el diagrama de máquina de estados realizado para el 
 
 Ahora la notación que se usó para el desarrollo del diagrama fue la siguiente:
 
-+Arduino . Clave . Huella / LED . Cerradura
++ Arduino . Clave . Huella / LED . Cerradura
 
 Para cada uno se usó uno o dos bits y su representación sé específica a continuación:
 
@@ -241,7 +241,7 @@ Para cada uno se usó uno o dos bits y su representación sé específica a cont
 5. Cerradura:
    - 0 → La cerradura se encuentra cerrada.
    - 1  → La cerradura se encuentra abierta.
-   - 
+
 Por último, como se puede observar en el diagrama, la máquina de estados cuenta con dos Reset. El "Reset 1" es para cuando se reinicia el Arduino o se Reinicia todo el sistema por completo, de modo que entra al estado S0, mientras que es "Reset 2" es cuando re reinicia el sistema de manera automática cuando la cerradura se abre y ya paso el tiempo de apertura por lo que entra al estado S1 y el sistema queda listo para recibir de nuevo una clave.
 
 ![](Imagenes/10_Maquina_Estados.jpg)

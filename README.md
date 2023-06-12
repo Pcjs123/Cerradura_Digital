@@ -171,6 +171,14 @@ Para la clave se tienen dos elementos, el primero son los flip flops que van a i
 Detalle de la Caja Clave
 
 ### Circuito interno de la Caja Clave
+
+Para este circuito se usaron dos registros de desplazamiento, cada uno conformado por 6 Flip Flops. A la caja ingresa un número de dos Bits donde cada número corresponde a un pulsador de la siguiente manera:
++ 00 → Pulsador 1
++ 01 → Pulsador 2
++ 10 → Pulsador 3
++ 11 → Pulsador 4
+Una vez se oprime uno de los pulsadores, el número correspondiente a ese pulsador se divide entre los dos registros, el primer Bit se va para el primer registro de desplazamiento y el segundo bit del mismo número se va para el segundo registro. A medida que se oprime nuevamente otro pulsador, los bits de cada uno de los registros se va desplazando hacia la derecha, una vez que se haya ingresado un número de 6 dígitos cada uno de los Flip Flops va a tener un cero o un uno dependiendo de la secuencia en que se haya ingresado la clave, cada uno de estos bits se estará comparando todo el tiempo mediante una compuerta "AND" con un número establecido que corresponde a la clave correcta, de modo que cuando se ingrese la clave correcta todas las compuertas "AND" tendrán un 1 en su salida y todas estas salidas están evaluadas por otra compuerta "AND", por lo que cuando todas las compuertas tengan un 1, la compuerta final dará un 1 a su salida determinando que la clave ingresada es correcta y permitiendo que el usuario siga con el siguiente paso para poder abrir la cerradura. En el caso en que la clave sea incorrecta, alguna de las compuertas tendrá un 0 en su salida, dando como resultado en la compuerta final un 0 y no permitiendo al usuario continuar con el siguiente paso del sistema.
+
 ![](Imagenes/8_Clave.jpg)
 
 ## Servomotor
@@ -182,6 +190,8 @@ Detalle de la Caja Servomotor
 
 
 ### Circuito interno de la Caja PWM
+
+Para esta parte del sistema fue necesario usar un contador y un comparador para poder establecer una señal de PWM variable. Primero el comparador recibe del Main una señal para saber hasta qué valor tiene que contar que es un valor constante determinado por el modelo del servomotor. El comparador es una de las cajas más importantes en este proceso, ya que este recibe una señal para saber si el servomotor tiene que estar abierto o cerrado y determinar el valor de corte para que la señal de PWM pase de estado alto a estado bajo. Por ejemplo, si el servomotor funciona con un periodo de 100 ms y para que esté abierto el servomotor tiene que estar 80 ms en alto y 20 ms en bajo, lo primero que el sistema hace es mandarle la señal al contador de que tiene que contar hasta 100 ms, después de este valor se vuelve 0 y comienza a contar de nuevo, por otra parte, el comparador va a recibir la señal de que tiene que estar en alto 80 ms, por lo que constantemente va a comparar el conteo hasta que llegue a este valor, la señal de salida del comparador será 1 para todos los valores menores a 80 ms y 0 para el resto de los valores hasta terminar el conteo, la señal de salida del comparador se guarda en un Flip Flop para una mayor exactitud del valor de salida para la PWM.
 
 ![](Imagenes/9_PWM.jpg)
 

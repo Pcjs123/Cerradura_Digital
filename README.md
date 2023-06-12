@@ -209,6 +209,8 @@ Detalle de la Caja Main
 
 # Video funcionamiento
 
+![](Imagenes/VIDEO_FINAL.mp4)
+
 # Conclusiones
 + Se realizó la construcción e implementación de un sistema que mejora la seguridad en puerta mediante una cerradura digital, que permite o restringe el ingreso de personas mediante un proceso de autenticación.
 + Se aplicaron conocimientos de reconocimiento biométrico de huellas dactilares y se implementó un sistema de contraseña haciendo uso de pulsadores.

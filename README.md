@@ -31,7 +31,9 @@ El archivo .pdf es el póster que se presentó en el **TECHFEST 2023** que se re
 
 # Cerradura Digital
 
-![](Imagenes/ESCUDO_2.png)
+<p align="center">
+  <img width="292" height="370" src="https://github.com/Pcjs123/Cerradura_Digital/assets/129623339/f7f8d5c7-213c-4232-b5be-7a888c108a5f">
+</p>
 
 **Laboratorio Electrónica Digital I**
 
@@ -251,11 +253,7 @@ Por último, como se puede observar en el diagrama, la máquina de estados cuent
 
 # Video funcionamiento
 
-
-
-https://github.com/Pcjs123/Cerradura_Digital/assets/129623339/fd5de87d-74e6-4bf8-b9e2-81326893b977
-
-
+https://github.com/Pcjs123/Cerradura_Digital/assets/129623339/8cf16f61-6271-4a3b-9256-23d0ff4f29aa
 
 # Conclusiones
 + Se realizó la construcción e implementación de un sistema que mejora la seguridad en puerta mediante una cerradura digital, que permite o restringe el ingreso de personas mediante un proceso de autenticación.

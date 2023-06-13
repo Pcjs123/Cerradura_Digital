@@ -31,9 +31,7 @@ El archivo .pdf es el póster que se presentó en el **TECHFEST 2023** que se re
 
 # Cerradura Digital
 
-<p align="center">
-  <img width="Imagenes/ESCUDO.jpg">
-</p>
+![](Imagenes/ESCUDO_2.png)
 
 **Laboratorio Electrónica Digital I**
 

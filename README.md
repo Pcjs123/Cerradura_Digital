@@ -227,7 +227,7 @@ Para cada uno se usó uno o dos bits y su representación sé específica a cont
 1. Arduino:
    - 0 → El Arduino no está inicializado.
    - 1  → El Arduino está inicializado.
-2. Arduino:
+2. Clave:
    - 0 → No se ha introducido ninguna clave - La clave introducida es incorrecta.
    - 1  → La clave introducida es correcta.
 3. Huella:
